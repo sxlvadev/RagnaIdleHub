@@ -1,0 +1,43 @@
+{
+  "name": "ragnaidle-hub",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Hub local de quatro contas do RagnaIdle",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder --win nsis --x64"
+  },
+  "devDependencies": {
+    "electron": "latest",
+    "electron-builder": "^26.18.0"
+  },
+  "build": {
+  "appId": "br.com.ragnaidlehub.desktop",
+  "productName": "RagnaIdle Hub",
+  "directories": {
+    "output": "dist"
+  },
+  "files": [
+    "main.js",
+    "preload.js",
+    "index.html",
+    "styles.css",
+    "renderer.js",
+    "package.json"
+  ],
+  "win": {
+    "target": "nsis",
+    "artifactName": "RagnaIdle-Hub-Setup-${version}.${ext}"
+  },
+  "nsis": {
+    "oneClick": false,
+    "perMachine": false,
+    "allowToChangeInstallationDirectory": true,
+    "createDesktopShortcut": true,
+    "createStartMenuShortcut": true,
+    "shortcutName": "RagnaIdle Hub"
+  }
+}
+
+}

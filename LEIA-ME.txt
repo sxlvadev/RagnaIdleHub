@@ -1,0 +1,31 @@
+RAGNAIDLE HUB — VERSÃO INICIAL
+
+1. Faça uma cópia da pasta atual do projeto.
+2. Feche o aplicativo e extraia os arquivos deste ZIP na mesma pasta onde já está o package.json.
+3. No PowerShell, dentro dessa pasta, execute:
+   npm install
+   npm start
+
+Se a política de execução bloquear npm.ps1, use npm.cmd install e npm.cmd start.
+
+IMPORTANTE SOBRE AS CONTAS
+Esta versão usa as partitions persist:conta1 a persist:conta4, como no exemplo inicial da conversa. Não muda app.setPath(userData), mas o Electron pode usar o nome do pacote para determinar a pasta de dados. A troca do nome do aplicativo pode fazer os logins anteriores não aparecerem, sem apagar os dados antigos. Para manter a identificação do aplicativo anterior, preserve o valor original de "name" no package.json antes de iniciar. Não apague pastas de dados para tentar resolver isso.
+
+FUNCIONA NESTA VERSÃO
+- Tema preto e amarelo, seis abas, quatro sessões separadas.
+- Modos individual, grade 2 x 2 e quatro colunas lado a lado.
+- Renomear contas, salvar layout e seleção localmente.
+- Recarregar conta individualmente e status de carregamento da página.
+- Preferência de aviso e notificação de teste.
+
+AINDA NÃO IMPLEMENTADO
+- Leitura de personagens, nível máximo e login.
+- Notificação real por nível máximo.
+- Chats, validação de bônus de lives e cadastro de parceiros.
+- Votos, leitura de contagem regressiva ou automações.
+- Instalador, bandeja, atualização automática e início com Windows.
+
+As quatro páginas ficam criadas durante o uso do hub, mesmo quando outra aba está visível. Isso não garante execução contínua em segundo plano, conexão permanente ou progresso de jogo.
+Não inclui tratamento de pop-ups/login Google. Se o login atual depender disso, será necessária integração específica.
+
+Para inspecionar a interface do hub: Ctrl+Shift+I.

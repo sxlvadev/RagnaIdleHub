@@ -1,0 +1,29 @@
+# Dependências
+node_modules/
+
+# Instaladores e builds
+dist/
+out/
+release/
+
+# Logs
+*.log
+
+# Credenciais e configurações locais
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.pfx
+*.p12
+
+# Dados locais de contas, se existirem dentro do projeto
+userData/
+sessions/
+cookies/
+.cache/
+
+# Windows
+Thumbs.db
+Desktop.ini
